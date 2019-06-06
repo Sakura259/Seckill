@@ -45,7 +45,7 @@ public class SeckillServiceImplTest {
 
     @Test
     public void testSeckillLodic() {
-        long id = 1000L;
+        long id = 1001L;
         Exposer exposer = seckillService.exportSeckillUrl(id);
         if (exposer.isExposed()){
             logger.info("exposer={}",exposer.toString());
