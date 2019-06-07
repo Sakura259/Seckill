@@ -6,12 +6,12 @@ import java.util.Date;
  * Created by Sakura on 2019/6/4.
  */
 public class Seckill {
-    private  long seckillId;
-    private String name;
-    private int number;
-    private Date startTime;
-    private Date endTime;
-    private Date createTime;
+    private  long seckillId;  //秒杀id
+    private String name;  //秒杀名称
+    private int number;  //商品库存
+    private Date startTime;  //秒杀开始时间
+    private Date endTime;  //秒杀结束时间
+    private Date createTime;  //秒杀创建时间
 
     @Override
     public String toString() {

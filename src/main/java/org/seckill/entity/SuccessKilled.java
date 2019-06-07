@@ -6,10 +6,10 @@ import java.util.Date;
  * Created by Sakura on 2019/6/4.
  */
 public class SuccessKilled {
-    private  long seckillId;
-    private long userPhone;
-    private short state;
-    private Date creatTime;
+    private  long seckillId;  //秒杀id
+    private long userPhone;  //用户手机号
+    private short state;  //秒杀状态（是否成功）
+    private Date creatTime;  //创建时间
     //多对一
     private Seckill seckill;
 

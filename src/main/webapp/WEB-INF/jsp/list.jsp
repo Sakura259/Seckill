@@ -44,16 +44,12 @@
                                     <a class="btn btn-info" href="/seckill/${sk.seckillId}/detail" target="_blank">link</a>
                                 </td>
                             </tr>
-
                         </c:forEach>
                     </tbody>
-                    
                 </table>
             </div>
         </div>
-
     </div>
-
 </body>
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>

@@ -40,6 +40,7 @@ public class SeckillServiceImpl implements SeckillService {
 
     @Autowired
     private SuccessKilledDao successKilledDao;
+
     //md5盐值字符串，用于混淆MD5
     private final String slat = "sahsakjhsalk@#$^$654&%$45632GFHjhLKJKL:GD";
 
@@ -94,7 +95,7 @@ public class SeckillServiceImpl implements SeckillService {
     * 2.保证事务方法的执行时间尽可能短，不要穿插其他网络操作
     * 3.不是所有方法都需要事务，只有一条修改操作（增删改），只读操作不需要事务控制
     * */
-    public SeckillExecution executeSecill(long seckillId, long userPhone, String md5)
+    public SeckillExecution executeSeckill(long seckillId, long userPhone, String md5)
             throws SeckillException, RepeatKillException, SeckillCloseException {
         if (md5 == null || !getMD5(seckillId).equals(md5)) {
             throw new SeckillException("seckill data rewrite");
@@ -131,7 +132,7 @@ public class SeckillServiceImpl implements SeckillService {
     }
 
     @Override
-    public SeckillExecution executeSecillProcedure(long seckillId, long userPhone, String md5) {
+    public SeckillExecution executeSeckillProcedure(long seckillId, long userPhone, String md5) {
         if (md5 == null || !md5.equals(getMD5(seckillId))){
             return new SeckillExecution(seckillId,SeckillStatEnum.DATA_REWRITE);
         }

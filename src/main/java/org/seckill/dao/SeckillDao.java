@@ -13,6 +13,7 @@ import java.util.Map;
 public interface SeckillDao {
     /*
     * 减库存
+    * @param：用于传递参数（当存在多个参数传递时，绑定参数）
     * */
     public int reduceNumber(@Param("seckillId") long seckillId,@Param("killTime") Date killTime);
 

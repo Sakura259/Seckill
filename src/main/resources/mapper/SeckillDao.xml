@@ -6,7 +6,7 @@
     <!--为DAO接口方法提供sql语句配置-->
     <update id="reduceNumber">
         <!--具体sql-->
-        update seckill.seckill
+        update seckill
         set number=number-1
         where seckill_id=#{seckillId}
         and start_time <![CDATA[ <= ]]> #{killTime}
@@ -23,7 +23,7 @@
 
     <select id="queryAll" resultType="Seckill">
         select seckill_id ,name,number,start_time,end_time,create_time
-        from seckill.seckill
+        from seckill
         order by create_time desc
         limit #{offset},#{limit}
     </select>
