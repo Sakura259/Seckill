@@ -29,4 +29,8 @@ public interface SeckillService {
     //4.执行秒杀操作
     public SeckillExecution executeSecill(long seckillId, long userPhone, String md5)
             throws SeckillException, RepeatKillException, SeckillCloseException;
+
+    //5.执行秒杀操作---通过存储过程
+    public SeckillExecution executeSecillProcedure(long seckillId, long userPhone, String md5);
+
 }
